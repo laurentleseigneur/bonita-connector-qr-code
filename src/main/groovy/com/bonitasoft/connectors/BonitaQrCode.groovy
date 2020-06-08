@@ -23,7 +23,7 @@ class BonitaQrCode extends AbstractConnector {
      * - validate that the content of the inputs is coherent with your use case (e.g: validate that a date is / isn't in the past ...)
      */
     @Override
-    def void validateInputParameters() throws ConnectorValidationException {
+    void validateInputParameters() throws ConnectorValidationException {
         checkMandatoryStringInput(CONTENT_INPUT)
         checkMandatoryStringInput(FILENAME_INPUT)
         checkMandatoryIntegerInput(SIZE_INPUT)
