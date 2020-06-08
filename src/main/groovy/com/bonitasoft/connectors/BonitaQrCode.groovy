@@ -75,11 +75,11 @@ class BonitaQrCode extends AbstractConnector {
      * [Optional] Open a connection to remote server
      */
     @Override
-    def void connect() throws ConnectorException{}
+    void connect() throws ConnectorException{}
 
     /**
      * [Optional] Close connection to remote server
      */
     @Override
-    def void disconnect() throws ConnectorException{}
+    void disconnect() throws ConnectorException{}
 }
