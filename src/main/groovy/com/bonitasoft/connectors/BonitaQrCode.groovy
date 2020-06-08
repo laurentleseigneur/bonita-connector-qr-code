@@ -57,7 +57,7 @@ class BonitaQrCode extends AbstractConnector {
      * - Set the output of the connector execution. If outputs are not set, connector fails.
      */
     @Override
-    def void executeBusinessLogic() throws ConnectorException {
+    void executeBusinessLogic() throws ConnectorException {
         def content = getInputParameter(CONTENT_INPUT)
         def fileName = getInputParameter(FILENAME_INPUT)
         def size = getInputParameter(SIZE_INPUT)
