@@ -3,7 +3,9 @@
   <implementationId>bonita-qr-code-impl</implementationId> <!-- Id of the implementation -->
   <implementationVersion>$implementation.version$</implementationVersion> <!-- Version of the implementation, retrieved from the pom.xml at build time -> ${project.version} -->
   <definitionId>bonita-qr-code</definitionId> <!-- Id of the definition implemented -->
-  <definitionVersion>1.0.0</definitionVersion> <!-- Version of the definition implemented -->
+
+  <!-- should be $definition.version$, workaround for https://github.com/bonitasoft/bonita-connector-archetype/issues/31-->
+  <definitionVersion>$implementation.version$</definitionVersion> <!-- Version of the definition implemented -->
   <implementationClassname>com.bonitasoft.connectors.BonitaQrCode</implementationClassname> <!-- Path to the main implementation class -->
   <description>Default connector implementation</description>
 
