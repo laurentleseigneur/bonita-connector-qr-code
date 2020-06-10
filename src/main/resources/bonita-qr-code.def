@@ -6,11 +6,11 @@
   <category icon="connector.png" id="Custom"/>
   <input mandatory="true" name="content" type="java.lang.String"/>
   <input mandatory="true" name="size" type="java.lang.Integer"/>
-  <input mandatory="true" name="fileName" type="java.lang.String"/>
+  <input mandatory="true" name="filename" type="java.lang.String"/>
   <output name="outputDocumentValue" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
   <page id="defaultPage">
     <widget xsi:type="definition:Text" id="qr-code-content" inputName="content"/>
     <widget xsi:type="definition:Text" id="qr-code-size" inputName="size"/>
-    <widget xsi:type="definition:Text" id="fileName" inputName="fileName"/>
+    <widget xsi:type="definition:Text" id="filename" inputName="filename"/>
   </page>
 </definition:ConnectorDefinition>

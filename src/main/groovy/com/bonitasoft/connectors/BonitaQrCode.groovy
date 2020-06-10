@@ -59,14 +59,17 @@ class BonitaQrCode extends AbstractConnector {
     @Override
     void executeBusinessLogic() throws ConnectorException {
         def content = getInputParameter(CONTENT_INPUT)
-        def fileName = getInputParameter(FILENAME_INPUT)
+        def filename = getInputParameter(FILENAME_INPUT)
         def size = getInputParameter(SIZE_INPUT)
         log.info "$CONTENT_INPUT : $content"
         log.info "$SIZE_INPUT : $size"
+        log.info "$FILENAME_INPUT : $filename"
 
         QrCodeGenerator generator=new QrCodeGenerator()
         def qrCode = generator.generateQRCodeImage(content, size)
-        DocumentValue documentValue= new DocumentValue(qrCode.bytes,"image/png",fileName)
+
+        log.info("generate file $filename result based on ${qrCode.getAbsolutePath()}")
+        DocumentValue documentValue= new DocumentValue(qrCode.bytes,"image/png",filename)
 
         setOutputParameter(OUTPUT_DOCUMENT_VALUE, documentValue)
     }
