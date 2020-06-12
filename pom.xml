@@ -10,7 +10,7 @@
 
     <groupId>com.bonitasoft.connectors</groupId>
     <artifactId>bonita-qr-code</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>bonita-qr-code</name>
     <packaging>jar</packaging>
 
