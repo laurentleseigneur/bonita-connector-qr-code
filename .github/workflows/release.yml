@@ -31,6 +31,9 @@ jobs:
 #        env:
 #          REPO: ${{ github.repository }}
 
+      - name: Build and test archetype
+        run: ./mvnw clean install
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
