@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -10,12 +9,13 @@
 
     <groupId>com.bonitasoft.connectors</groupId>
     <artifactId>bonita-qr-code</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>bonita-qr-code</name>
     <packaging>jar</packaging>
 
     <properties>
         <bonita.engine.version>7.10.1</bonita.engine.version>
+        <gpg.skip>true</gpg.skip>
     </properties>
 
     <dependencies>
@@ -124,4 +124,10 @@
             </plugin>
         </plugins>
     </build>
+    <scm>
+        <url>https://github.com/laurentleseigneur/bonita-connector-qr-code</url>
+        <connection>scm:git:ssh://git@github.com/laurentleseigneur/bonita-connector-qr-code.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/laurentleseigneur/bonita-connector-qr-code.git</developerConnection>
+      <tag>HEAD</tag>
+  </scm>
 </project>
