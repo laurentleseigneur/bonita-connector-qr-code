@@ -36,7 +36,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
           tag_name: ${{ github.ref }}
-          release_name: v${{ github.ref }}
+          release_name: ${{ github.ref }}
 #          body: |
 #            ${{ steps.Changelog.outputs.changelog }}
           draft: false
@@ -49,6 +49,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: target/bonita-qr-code-${{ steps.extract_version.outputs.version }}.zip
-          asset_name: bonita-qr-code-${{ steps.extract_version.outputs.version }}.zip
+          asset_path: target/${{ github.ref }}.zip
+          asset_name: ${{ github.ref }}.zip
           asset_content_type: application/zip
