@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
   <id>bonita-qr-code</id>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <icon>connector.png</icon>
   <category icon="connector.png" id="Custom"/>
+  <input mandatory="true" name="codeType" type="java.lang.String"/>
   <input mandatory="true" name="content" type="java.lang.String"/>
-  <input mandatory="true" name="size" type="java.lang.Integer"/>
+  <input mandatory="false" name="size" type="java.lang.Integer"/>
+  <input mandatory="false" name="width" type="java.lang.Integer"/>
+  <input mandatory="false" name="height" type="java.lang.Integer"/>
   <input mandatory="true" name="filename" type="java.lang.String"/>
   <output name="outputDocumentValue" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
   <page id="defaultPage">
+    <widget xsi:type="definition:Text" id="qr-code-type" inputName="codeType"/>
     <widget xsi:type="definition:Text" id="qr-code-content" inputName="content"/>
     <widget xsi:type="definition:Text" id="qr-code-size" inputName="size"/>
+    <widget xsi:type="definition:Text" id="qr-code-width" inputName="width"/>
+    <widget xsi:type="definition:Text" id="qr-code-height" inputName="height"/>
     <widget xsi:type="definition:Text" id="filename" inputName="filename"/>
   </page>
 </definition:ConnectorDefinition>
